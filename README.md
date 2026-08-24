@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EcoSort AI ♻️
 
-## Getting Started
+An AI-powered waste segregation assistant that classifies items and suggests responsible disposal methods.
 
-First, run the development server:
+🔗 **Live demo**: https://ecosort-ai-kappa.vercel.app
 
+## Problem
+Improper waste segregation reduces recycling efficiency and increases landfill burden. Many people are unsure which bin common items belong in.
+
+## Solution
+A simple web app where users describe an item and receive:
+- The correct waste category (Wet / Dry / Hazardous / E-Waste)
+- A one-line reason
+- A practical disposal tip
+
+## Responsible AI Considerations
+- The model is instructed to respond "Unclear" rather than guess when uncertain, avoiding confidently wrong disposal advice
+- No personal or location data is collected or stored
+- Category logic is transparent and shown to the user, not a black box
+
+## Tech Stack
+Next.js · TypeScript · Tailwind CSS · Groq API (Llama) · Vercel
+
+## Running locally
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Add a `.env.local` file with `GROQ_API_KEY=your-key-here`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## SDG Alignment
+SDG 12: Responsible Consumption & Production
